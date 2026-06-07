@@ -1,3 +1,4 @@
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 
@@ -9,7 +10,10 @@ export function FinalCta({ title, body, ctaLabel }: { title: string; body: strin
           <h2 className="font-serif text-3xl md:text-4xl">{title}</h2>
           <p className="mt-2 max-w-xl text-ink-200">{body}</p>
         </div>
-        <Button href="/contact" variant="secondary">{ctaLabel}</Button>
+        <Button href="/contact" variant="primary">
+          {ctaLabel}
+          <ArrowRight size={16} />
+        </Button>
       </Container>
     </section>
   );
