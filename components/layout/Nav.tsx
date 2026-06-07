@@ -1,3 +1,4 @@
+import { BarChart3 } from 'lucide-react';
 import { getDictionary } from '@/lib/i18n/get-dictionary';
 import { Link } from '@/lib/i18n/link';
 import { Container } from '@/components/ui/Container';
@@ -10,7 +11,10 @@ export async function Nav({ locale }: { locale: Locale }) {
   return (
     <header className="sticky top-0 z-40 border-b border-ink-100 bg-ink-50/80 backdrop-blur">
       <Container className="flex h-16 items-center justify-between">
-        <Link href="/" className="font-serif text-xl text-ink-900">APP Consulting</Link>
+        <Link href="/" className="flex items-center gap-2 font-serif text-xl text-ink-900">
+          <BarChart3 size={16} aria-hidden />
+          APP Consulting
+        </Link>
         <nav className="hidden items-center gap-8 text-sm text-ink-600 md:flex">
           <Link href="/services" className="hover:text-ink-900">{d.nav.services}</Link>
           <Link href="/about" className="hover:text-ink-900">{d.nav.about}</Link>
