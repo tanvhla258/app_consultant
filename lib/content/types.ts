@@ -4,6 +4,7 @@ export type ServiceFrontmatter = {
   summary: string;
   bullets: string[];
   order: number;
+  image?: string;
   whoFor?: string[];
   delivers?: string[];
 };
@@ -18,4 +19,5 @@ export type PartnerFrontmatter = {
   alumniOf: string[];
   notableEngagements: string[];
   order: number;
+  image?: string;
 };
