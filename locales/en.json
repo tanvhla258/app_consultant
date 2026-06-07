@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "services": "Services",
+    "about": "About",
+    "partners": "Partners",
+    "contact": "Contact",
+    "bookConsultation": "Book a Consultation"
+  },
+  "footer": {
+    "tagline": "Your Vision. Our Mission.",
+    "officeHeading": "Office",
+    "contactHeading": "Contact",
+    "servicesHeading": "Services",
+    "rights": "All rights reserved."
+  },
+  "form": {
+    "name": "Full name",
+    "company": "Company",
+    "email": "Email",
+    "phone": "Phone",
+    "service": "Service of interest",
+    "message": "Message",
+    "submit": "Send message",
+    "success": "Thanks — we'll be in touch within one business day.",
+    "errors": {
+      "name": "Please enter your name.",
+      "email": "Enter a valid email.",
+      "message": "Tell us briefly what you need."
+    }
+  },
+  "common": {
+    "readMore": "Read more",
+    "discuss": "Discuss this service",
+    "back": "Back"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "services": "Dịch vụ",
+    "about": "Về chúng tôi",
+    "partners": "Đối tác",
+    "contact": "Liên hệ",
+    "bookConsultation": "Đặt lịch tư vấn"
+  },
+  "footer": {
+    "tagline": "Tầm Nhìn Của Bạn. Sứ Mệnh Của Chúng Tôi.",
+    "officeHeading": "Văn phòng",
+    "contactHeading": "Liên hệ",
+    "servicesHeading": "Dịch vụ",
+    "rights": "Bảo lưu mọi quyền."
+  },
+  "form": {
+    "name": "Họ và tên",
+    "company": "Công ty",
+    "email": "Email",
+    "phone": "Điện thoại",
+    "service": "Dịch vụ quan tâm",
+    "message": "Nội dung",
+    "submit": "Gửi tin nhắn",
+    "success": "Cảm ơn — chúng tôi sẽ phản hồi trong 1 ngày làm việc.",
+    "errors": {
+      "name": "Vui lòng nhập tên.",
+      "email": "Vui lòng nhập email hợp lệ.",
+      "message": "Vui lòng mô tả ngắn gọn nhu cầu của bạn."
+    }
+  },
+  "common": {
+    "readMore": "Xem thêm",
+    "discuss": "Trao đổi về dịch vụ này",
+    "back": "Quay lại"
+  }
+}
