@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "eyebrow": "Ex-Big4 Advisors · Ho Chi Minh City",
+    "title": "Your Vision. Our Mission.",
+    "subtitle": "Accounting, tax, and advisory services for multinationals, investment funds, and ambitious Vietnamese businesses.",
+    "primaryCta": "Book a Consultation",
+    "secondaryCta": "Explore Services",
+    "trust": ["Ex-KPMG", "ACCA", "VACPA", "20+ years"]
+  },
+  "stats": [
+    { "value": "20+", "label": "Years of practice" },
+    { "value": "3", "label": "Ex-Big4 partners" },
+    { "value": "90+", "label": "Engagements led" },
+    { "value": "13", "label": "Industries served" }
+  ],
+  "method": [
+    { "title": "Understand", "body": "Deep, thorough understanding of your operations." },
+    { "title": "Diagnose", "body": "Identify the key risks and issues in your model." },
+    { "title": "Prioritize", "body": "Agree on what's urgent and what can wait." },
+    { "title": "Recommend", "body": "Propose solutions tuned to your context." },
+    { "title": "Implement", "body": "Work alongside your team to deploy." },
+    { "title": "Monitor", "body": "Track outcomes and surface new risks." }
+  ],
+  "industries": [
+    "Manufacturing & services","Retail & ecommerce","F&B & restaurants","Construction & real estate",
+    "Banking & finance","Investment funds","Insurance & securities","Pharmacy & medical",
+    "Information technology","Health & hospitality","Hotel & tourism","Education, gym & media",
+    "Transportation & logistics"
+  ],
+  "finalCta": {
+    "title": "Let's discuss your next move.",
+    "body": "Tell us about your business — we'll respond within one business day."
+  }
+}

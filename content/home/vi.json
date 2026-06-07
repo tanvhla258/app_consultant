@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "eyebrow": "Cố vấn từ Big4 · TP. Hồ Chí Minh",
+    "title": "Tầm Nhìn Của Bạn. Sứ Mệnh Của Chúng Tôi.",
+    "subtitle": "Dịch vụ kế toán, thuế và tư vấn cho tập đoàn đa quốc gia, quỹ đầu tư và doanh nghiệp Việt Nam đầy tham vọng.",
+    "primaryCta": "Đặt lịch tư vấn",
+    "secondaryCta": "Khám phá dịch vụ",
+    "trust": ["Cựu KPMG", "ACCA", "VACPA", "20+ năm"]
+  },
+  "stats": [
+    { "value": "20+", "label": "Năm kinh nghiệm" },
+    { "value": "3", "label": "Đối tác từ Big4" },
+    { "value": "90+", "label": "Dự án đã thực hiện" },
+    { "value": "13", "label": "Ngành phục vụ" }
+  ],
+  "method": [
+    { "title": "Tìm hiểu", "body": "Nắm sâu hoạt động của doanh nghiệp bạn." },
+    { "title": "Chẩn đoán", "body": "Xác định rủi ro và vấn đề chính." },
+    { "title": "Ưu tiên", "body": "Thống nhất việc cấp bách và việc có thể chờ." },
+    { "title": "Đề xuất", "body": "Giải pháp phù hợp với bối cảnh của bạn." },
+    { "title": "Triển khai", "body": "Phối hợp cùng đội ngũ của bạn để thực thi." },
+    { "title": "Giám sát", "body": "Theo dõi kết quả và phát hiện rủi ro mới." }
+  ],
+  "industries": [
+    "Sản xuất & dịch vụ","Bán lẻ & TMĐT","F&B & nhà hàng","Xây dựng & bất động sản",
+    "Ngân hàng & tài chính","Quỹ đầu tư","Bảo hiểm & chứng khoán","Dược phẩm & y tế",
+    "Công nghệ thông tin","Sức khỏe & dịch vụ lưu trú","Khách sạn & du lịch","Giáo dục, gym & truyền thông",
+    "Vận tải & logistics"
+  ],
+  "finalCta": {
+    "title": "Hãy trao đổi về bước đi tiếp theo.",
+    "body": "Chia sẻ về doanh nghiệp của bạn — chúng tôi sẽ phản hồi trong 1 ngày làm việc."
+  }
+}
