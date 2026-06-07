@@ -40,7 +40,7 @@ export default async function LocaleLayout({
         <JsonLd data={organization()} />
         <JsonLd data={localBusiness()} />
         <Nav locale={locale as Locale} />
-        <main><PageTransition>{children}</PageTransition></main>
+        <main className="relative"><PageTransition>{children}</PageTransition></main>
         <Footer locale={locale as Locale} />
       </body>
     </html>
