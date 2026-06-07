@@ -12,7 +12,7 @@ export function FinalCta({ title, body, ctaLabel }: { title: string; body: strin
         </div>
         <Button href="/contact" variant="primary">
           {ctaLabel}
-          <ArrowRight size={16} />
+          <ArrowRight size={16} aria-hidden />
         </Button>
       </Container>
     </section>
