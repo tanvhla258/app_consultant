@@ -5,7 +5,9 @@ vi.mock('resend', () => ({
   Resend: vi.fn(() => ({ emails: { send: sendMock } })),
 }));
 
-import { submitContactForm } from '@/lib/actions/contact';
+import { submitContactForm, type ContactState } from '@/lib/actions/contact';
+
+const initialState: ContactState = { ok: false, errors: {} };
 
 beforeEach(() => {
   sendMock.mockReset();
@@ -30,21 +32,21 @@ function makeForm(overrides: Record<string, string> = {}) {
 
 describe('submitContactForm', () => {
   it('returns ok when valid', async () => {
-    const result = await submitContactForm({ ok: false, errors: {} } as any, makeForm());
+    const result = await submitContactForm(initialState, makeForm());
     expect(result.ok).toBe(true);
     expect(sendMock).toHaveBeenCalledOnce();
   });
   it('returns field errors when invalid', async () => {
-    const result = await submitContactForm({ ok: false, errors: {} } as any, makeForm({ email: 'not-an-email', message: '' }));
+    const result = await submitContactForm(initialState, makeForm({ email: 'not-an-email', message: '' }));
     expect(result.ok).toBe(false);
     if (!result.ok) {
-      expect((result as any).errors.email).toBeDefined();
-      expect((result as any).errors.message).toBeDefined();
+      expect(result.errors.email).toBeDefined();
+      expect(result.errors.message).toBeDefined();
     }
     expect(sendMock).not.toHaveBeenCalled();
   });
   it('rejects honeypot submissions silently', async () => {
-    const result = await submitContactForm({ ok: false, errors: {} } as any, makeForm({ honeypot: 'spam-bot' }));
+    const result = await submitContactForm(initialState, makeForm({ honeypot: 'spam-bot' }));
     expect(result.ok).toBe(true);
     expect(sendMock).not.toHaveBeenCalled();
   });

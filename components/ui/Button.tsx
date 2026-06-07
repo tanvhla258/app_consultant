@@ -21,6 +21,7 @@ export function Button(props: AsButton | AsLink) {
   if ('href' in props && props.href) {
     return <Link href={props.href} className={cls}>{children}</Link>;
   }
-  const { href: _h, variant: _v, className: _c, children: _ch, ...buttonProps } = props as AsButton;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { href: _, variant: __, className: ___, children: ____, ...buttonProps } = props as AsButton;
   return <button className={cls} {...buttonProps}>{children}</button>;
 }
