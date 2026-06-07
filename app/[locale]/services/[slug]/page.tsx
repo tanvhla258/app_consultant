@@ -1,4 +1,6 @@
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
+import { CheckCircle2 } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { Heading } from '@/components/ui/Heading';
 import { Button } from '@/components/ui/Button';
@@ -64,6 +66,16 @@ export default async function ServiceDetail({ params }: { params: Promise<Params
         </Container>
       </section>
 
+      <div className="relative h-64 w-full overflow-hidden md:h-96">
+        <Image
+          src={doc.frontmatter.image ?? '/images/service-banner-placeholder.svg'}
+          alt={doc.frontmatter.title}
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+
       <Container className="prose prose-ink max-w-3xl py-12 text-ink-600">
         {body}
       </Container>
@@ -74,8 +86,9 @@ export default async function ServiceDetail({ params }: { params: Promise<Params
             <Heading size="md">{loc === 'vi' ? 'Sản phẩm bàn giao' : 'What we deliver'}</Heading>
             <ul className="mt-8 grid gap-3 md:grid-cols-2">
               {doc.frontmatter.delivers.map(item => (
-                <li key={item} className="rounded-xl border border-ink-200 bg-ink-50 p-4 text-ink-600">
-                  <span className="text-accent-500">✓ </span>{item}
+                <li key={item} className="flex items-start gap-2 rounded-xl border border-ink-200 bg-ink-50 p-4 text-ink-600">
+                  <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-accent-500" />
+                  {item}
                 </li>
               ))}
             </ul>
