@@ -5,7 +5,8 @@
     "subtitle": "Accounting, tax, and advisory services for multinationals, investment funds, and ambitious Vietnamese businesses.",
     "primaryCta": "Book a Consultation",
     "secondaryCta": "Explore Services",
-    "trust": ["Ex-KPMG", "ACCA", "VACPA", "20+ years"]
+    "trust": ["Ex-KPMG", "ACCA", "VACPA", "20+ years"],
+    "heroImage": "/images/hero-placeholder.svg"
   },
   "stats": [
     { "value": "20+", "label": "Years of practice" },

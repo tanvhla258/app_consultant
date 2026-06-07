@@ -47,6 +47,7 @@ export default async function Home({ params }: { params: Promise<Params> }) {
         primaryCta={{ label: home.hero.primaryCta, href: '/contact' }}
         secondaryCta={{ label: home.hero.secondaryCta, href: '/services' }}
         trust={home.hero.trust}
+        imageSrc={home.hero.heroImage}
       />
 
       <ServiceGrid
