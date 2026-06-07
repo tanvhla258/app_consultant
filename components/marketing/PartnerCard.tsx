@@ -1,10 +1,18 @@
+import Image from 'next/image';
 import type { PartnerFrontmatter } from '@/lib/content/types';
 import { Link } from '@/lib/i18n/link';
 
 export function PartnerCard({ partner }: { partner: PartnerFrontmatter }) {
   return (
     <Link href={`/partners#${partner.slug}`} className="block rounded-2xl border border-ink-200 bg-ink-50 p-6 transition-all hover:border-ink-900">
-      <div className="aspect-[4/5] rounded-xl bg-ink-100" aria-hidden/>
+      <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-ink-100">
+        <Image
+          src={partner.image ?? '/images/partner-placeholder.svg'}
+          alt={partner.name}
+          fill
+          className="object-cover"
+        />
+      </div>
       <div className="mt-4 font-serif text-xl text-ink-900">{partner.name}</div>
       <div className="text-sm text-ink-400">{partner.role}</div>
       <div className="mt-3 flex flex-wrap gap-1 text-xs">
