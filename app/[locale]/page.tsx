@@ -15,6 +15,8 @@ import { notFound } from 'next/navigation';
 import { Reveal } from '@/components/motion/Reveal';
 import enHome from '@/content/home/en.json';
 import viHome from '@/content/home/vi.json';
+import { Clock, Users, Award, Building2 } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
 type Params = { locale: string };
 
@@ -37,6 +39,8 @@ export default async function Home({ params }: { params: Promise<Params> }) {
   const d = await getDictionary(loc);
   const home = loc === 'vi' ? viHome : enHome;
   const partners = await getAllPartners(loc);
+
+  const STAT_ICONS: LucideIcon[] = [Clock, Users, Award, Building2];
 
   return (
     <>
@@ -69,7 +73,11 @@ export default async function Home({ params }: { params: Promise<Params> }) {
             </p>
           </Reveal>
           <div className="grid grid-cols-2 gap-4">
-            {home.stats.map(s => <Reveal key={s.label}><StatTile value={s.value} label={s.label} /></Reveal>)}
+            {home.stats.map((s, i) => (
+              <Reveal key={s.label}>
+                <StatTile value={s.value} label={s.label} icon={STAT_ICONS[i]} />
+              </Reveal>
+            ))}
           </div>
         </Container>
       </section>
