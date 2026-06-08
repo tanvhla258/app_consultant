@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { Container } from '@/components/ui/Container';
 import { Heading } from '@/components/ui/Heading';
@@ -76,7 +77,11 @@ export default async function PartnersPage({ params }: { params: Promise<Params>
             <Reveal key={p.frontmatter.slug}>
               <article id={p.frontmatter.slug} className={`grid items-start gap-12 md:grid-cols-[2fr_3fr] ${reverse ? 'md:[&>div:first-child]:order-2' : ''}`}>
                 <div>
-                  <div className="aspect-[4/5] rounded-2xl bg-ink-100" aria-hidden/>
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-ink-100">
+                    {(p.frontmatter.imageDetail ?? p.frontmatter.image) && (
+                      <Image src={p.frontmatter.imageDetail ?? p.frontmatter.image!} alt={p.frontmatter.name} fill className="object-cover" />
+                    )}
+                  </div>
                 </div>
                 <div>
                   <h2 className="font-serif text-3xl text-ink-900">{p.frontmatter.name}</h2>

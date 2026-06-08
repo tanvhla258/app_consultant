@@ -20,4 +20,5 @@ export type PartnerFrontmatter = {
   notableEngagements: string[];
   order: number;
   image?: string;
+  imageDetail?: string;
 };

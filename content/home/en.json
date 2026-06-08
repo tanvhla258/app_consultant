@@ -6,7 +6,7 @@
     "primaryCta": "Book a Consultation",
     "secondaryCta": "Explore Services",
     "trust": ["Ex-KPMG", "ACCA", "VACPA", "20+ years"],
-    "heroImage": "/images/hero-placeholder.svg"
+    "heroImage": "/images/hero.jpg"
   },
   "stats": [
     { "value": "20+", "label": "Years of practice" },

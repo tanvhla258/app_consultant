@@ -1,12 +1,12 @@
 {
   "hero": {
     "eyebrow": "Cố vấn từ Big4 · TP. Hồ Chí Minh",
-    "title": "Tầm Nhìn Của Bạn. Sứ Mệnh Của Chúng Tôi.",
+    "title": "Your Vision. Our Mission.",
     "subtitle": "Dịch vụ kế toán, thuế và tư vấn cho tập đoàn đa quốc gia, quỹ đầu tư và doanh nghiệp Việt Nam đầy tham vọng.",
     "primaryCta": "Đặt lịch tư vấn",
     "secondaryCta": "Khám phá dịch vụ",
     "trust": ["Cựu KPMG", "ACCA", "VACPA", "20+ năm"],
-    "heroImage": "/images/hero-placeholder.svg"
+    "heroImage": "/images/hero.jpg"
   },
   "stats": [
     { "value": "20+", "label": "Năm kinh nghiệm" },
