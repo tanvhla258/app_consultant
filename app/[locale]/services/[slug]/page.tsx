@@ -108,7 +108,7 @@ export default async function ServiceDetail({ params }: { params: Promise<Params
             <div className="mt-6 flex flex-wrap gap-3">
               {doc.frontmatter.whoFor.map(item => (
                 <span key={item} className="flex items-center gap-3 rounded-xl border border-brand-200 bg-white px-5 py-3">
-                  <span className="h-5 w-1 shrink-0 rounded-full bg-brand-500" />
+                  <span aria-hidden="true" className="h-5 w-1 shrink-0 rounded-full bg-brand-500" />
                   <span className="text-sm text-ink-600">{item}</span>
                 </span>
               ))}
@@ -119,9 +119,9 @@ export default async function ServiceDetail({ params }: { params: Promise<Params
 
       <section className="bg-brand-500 py-16">
         <Container className="max-w-3xl text-center">
-          <p className="font-serif text-3xl text-ink-900 md:text-4xl">
+          <Heading size="md" className="text-ink-900">
             {loc === 'vi' ? 'Sẵn sàng nói chuyện về nhu cầu của bạn?' : 'Ready to talk about your needs?'}
-          </p>
+          </Heading>
           <Button href={`/contact?service=${slug}`} variant="secondary" className="mt-8">
             {d.common.discuss}
           </Button>
