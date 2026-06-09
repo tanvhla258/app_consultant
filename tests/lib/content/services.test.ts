@@ -23,5 +23,7 @@ describe('services registry', () => {
     expect(s?.frontmatter.stats?.length).toBeGreaterThan(0);
     expect(s?.frontmatter.stats?.[0]).toHaveProperty('value');
     expect(s?.frontmatter.stats?.[0]).toHaveProperty('label');
+    expect(s?.frontmatter.stats?.[0].value).toBe('8+');
+    expect(s?.frontmatter.stats?.[0].label).toBe('Standards Covered');
   });
 });
