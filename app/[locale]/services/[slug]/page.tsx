@@ -5,6 +5,7 @@ import { Container } from '@/components/ui/Container';
 import { Heading } from '@/components/ui/Heading';
 import { Button } from '@/components/ui/Button';
 import { Reveal } from '@/components/motion/Reveal';
+import { ServiceStats } from '@/components/marketing/ServiceStats';
 import { JsonLd } from '@/lib/seo/jsonld';
 import { service as serviceSchema, breadcrumbs } from '@/lib/seo/schema';
 import { getService, getAllServices } from '@/lib/content/services';
@@ -76,18 +77,22 @@ export default async function ServiceDetail({ params }: { params: Promise<Params
         />
       </div>
 
+      {doc.frontmatter.stats ? <ServiceStats stats={doc.frontmatter.stats} /> : null}
+
       <Container className="prose prose-ink max-w-3xl py-12 text-ink-600">
         {body}
       </Container>
 
       {doc.frontmatter.delivers ? (
-        <section className="bg-ink-100 py-20">
+        <section className="bg-ink-900 py-20">
           <Container className="max-w-3xl">
-            <Heading size="md">{loc === 'vi' ? 'Sản phẩm bàn giao' : 'What we deliver'}</Heading>
+            <Heading size="md" className="text-ink-50">
+              {loc === 'vi' ? 'Sản phẩm bàn giao' : 'What we deliver'}
+            </Heading>
             <ul className="mt-8 grid gap-3 md:grid-cols-2">
               {doc.frontmatter.delivers.map(item => (
-                <li key={item} className="flex items-start gap-2 rounded-xl border border-ink-200 bg-ink-50 p-4 text-ink-600">
-                  <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-accent-500" />
+                <li key={item} className="flex items-start gap-3 rounded-xl border border-brand-500/30 bg-white/10 p-4 text-ink-50">
+                  <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-brand-500" />
                   {item}
                 </li>
               ))}
@@ -97,17 +102,31 @@ export default async function ServiceDetail({ params }: { params: Promise<Params
       ) : null}
 
       {doc.frontmatter.whoFor ? (
-        <section className="py-20">
+        <section className="bg-brand-50 py-20">
           <Container className="max-w-3xl">
             <Heading size="md">{loc === 'vi' ? 'Phù hợp với' : "Who it's for"}</Heading>
-            <div className="mt-6 flex flex-wrap gap-2">
+            <div className="mt-6 flex flex-wrap gap-3">
               {doc.frontmatter.whoFor.map(item => (
-                <span key={item} className="rounded-full border border-ink-200 px-4 py-2 text-sm text-ink-600">{item}</span>
+                <span key={item} className="flex items-center gap-3 rounded-xl border border-brand-200 bg-white px-5 py-3">
+                  <span className="h-5 w-1 shrink-0 rounded-full bg-brand-500" />
+                  <span className="text-sm text-ink-600">{item}</span>
+                </span>
               ))}
             </div>
           </Container>
         </section>
       ) : null}
+
+      <section className="bg-brand-500 py-16">
+        <Container className="max-w-3xl text-center">
+          <p className="font-serif text-3xl text-ink-900 md:text-4xl">
+            {loc === 'vi' ? 'Sẵn sàng nói chuyện về nhu cầu của bạn?' : 'Ready to talk about your needs?'}
+          </p>
+          <Button href={`/contact?service=${slug}`} variant="secondary" className="mt-8">
+            {d.common.discuss}
+          </Button>
+        </Container>
+      </section>
 
       <section className="bg-ink-100 py-20">
         <Container>
