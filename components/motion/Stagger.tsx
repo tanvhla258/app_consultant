@@ -19,9 +19,19 @@ const item = {
   },
 };
 
-export function Stagger({ children }: { children: ReactNode }) {
+export function Stagger({
+  children,
+  mode = 'mount',
+}: {
+  children: ReactNode;
+  mode?: 'mount' | 'inView';
+}) {
+  const animateOrInView = mode === 'inView'
+    ? { whileInView: 'show', viewport: { once: true, amount: 0.2 } }
+    : { animate: 'show' };
+
   return (
-    <motion.div initial="hidden" animate="show" variants={container}>
+    <motion.div initial="hidden" variants={container} {...animateOrInView}>
       {Array.isArray(children)
         ? children.map((child, i) => (
             <motion.div key={i} variants={item}>

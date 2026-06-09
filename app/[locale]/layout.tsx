@@ -6,6 +6,7 @@ import { locales, isLocale, type Locale } from '@/lib/i18n/config';
 import { Nav } from '@/components/layout/Nav';
 import { Footer } from '@/components/layout/Footer';
 import { PageTransition } from '@/components/motion/PageTransition';
+import { MotionConfig } from 'framer-motion';
 import type { ReactNode } from 'react';
 
 const sans = Inter({
@@ -40,7 +41,9 @@ export default async function LocaleLayout({
         <JsonLd data={organization()} />
         <JsonLd data={localBusiness()} />
         <Nav locale={locale as Locale} />
-        <main className="relative"><PageTransition>{children}</PageTransition></main>
+        <MotionConfig reducedMotion="user">
+          <main className="relative"><PageTransition>{children}</PageTransition></main>
+        </MotionConfig>
         <Footer locale={locale as Locale} />
       </body>
     </html>
