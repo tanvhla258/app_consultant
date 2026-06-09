@@ -7,6 +7,7 @@ export type ServiceFrontmatter = {
   image?: string;
   whoFor?: string[];
   delivers?: string[];
+  stats?: { value: string; label: string }[];
 };
 
 export type PartnerFrontmatter = {

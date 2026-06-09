@@ -17,4 +17,11 @@ describe('services registry', () => {
     const s = await getService('accounting', 'vi');
     expect(s?.frontmatter.slug).toBe('accounting');
   });
+  it('exposes stats array on training service', async () => {
+    const s = await getService('training', 'en');
+    expect(Array.isArray(s?.frontmatter.stats)).toBe(true);
+    expect(s?.frontmatter.stats?.length).toBeGreaterThan(0);
+    expect(s?.frontmatter.stats?.[0]).toHaveProperty('value');
+    expect(s?.frontmatter.stats?.[0]).toHaveProperty('label');
+  });
 });
