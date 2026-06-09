@@ -36,7 +36,7 @@ export function Hero({
       />
       <div className="absolute inset-0 bg-ink-900/50" aria-hidden />
       <Container className="relative z-10">
-        <span className="text-xs uppercase tracking-[0.2em] text-brand-300">{eyebrow}</span>
+        <span className="text-xs uppercase tracking-[0.2em] text-white">{eyebrow}</span>
         <h1 className="mt-6 font-serif text-5xl leading-[1.1] text-ink-50 md:text-7xl">
           <Stagger>
             {words.map((w, i) => (
