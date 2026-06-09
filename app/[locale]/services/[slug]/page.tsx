@@ -92,7 +92,7 @@ export default async function ServiceDetail({ params }: { params: Promise<Params
             <ul className="mt-8 grid gap-3 md:grid-cols-2">
               {doc.frontmatter.delivers.map(item => (
                 <li key={item} className="flex items-start gap-3 rounded-xl border border-brand-500/30 bg-white/10 p-4 text-ink-50">
-                  <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-brand-500" />
+                  <CheckCircle2 size={16} aria-hidden="true" className="mt-0.5 shrink-0 text-brand-500" />
                   {item}
                 </li>
               ))}
@@ -122,7 +122,7 @@ export default async function ServiceDetail({ params }: { params: Promise<Params
           <Heading size="md" className="text-ink-900">
             {loc === 'vi' ? 'Sẵn sàng nói chuyện về nhu cầu của bạn?' : 'Ready to talk about your needs?'}
           </Heading>
-          <Button href={`/contact?service=${slug}`} variant="secondary" className="mt-8">
+          <Button href={`/contact?service=${slug}`} variant="secondary" className="mt-8 focus-visible:outline-ink-900">
             {d.common.discuss}
           </Button>
         </Container>
