@@ -49,7 +49,7 @@ export function Hero({
           <Button href={primaryCta.href}>{primaryCta.label}</Button>
           <Button href={secondaryCta.href} variant="secondary">{secondaryCta.label}</Button>
         </div>
-        <ul className="mt-12 flex flex-wrap gap-x-8 gap-y-3 text-sm text-ink-300">
+        <ul className="mt-12 flex flex-wrap gap-x-8 gap-y-3 text-sm text-white">
           {trust.map(t => (
             <li key={t} className={cn('flex items-center gap-2')}>
               <span className="h-1 w-1 rounded-full bg-accent-500" />
